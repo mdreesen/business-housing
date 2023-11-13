@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 
 // Importing page components
-import Hero from './ui/hero';
+import Hero from './ui/components/hero';
 import Nash from './ui/widgets/nash';
 
 export const metadata: Metadata = {
