@@ -5,13 +5,14 @@ import seasons from '../composables/seasons';
 
 
 // Styling
-import styles from './styles/Hero.module.css';
+import styles from './styles/hero.module.css';
 
 export default function Hero() {
 
     const season = seasons();
     return (
         <div className="flex items-center justify-center">
+            <h2 className={styles['text']}>Chris Nash | Loan Officer/Certified Mortgage Advisor</h2>
             <Image
                 src={`/assets/background-${season}.webp`}
                 priority
