@@ -1,0 +1,6 @@
+.hero {
+    height: 75vh;
+    width: 100vw;
+    object-fit: cover;
+    filter: brightness(0.8);
+  }
