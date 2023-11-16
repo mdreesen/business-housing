@@ -1,27 +1,40 @@
+import React from 'react';
 import Image from 'next/image';
-
-// Composable
-import seasons from '../../composables/seasons';
-
-
-// Styling
 import styles from '../styles/hero.module.css';
 
-export default function Hero() {
+export default function hero({
+  video,
+  source,
+  image,
+  imageTitle,
+}: {
+  video?: boolean;
+  image?: boolean;
+  source: string;
+  imageTitle?: string;
+}) {
 
-    const season = seasons();
-
-    return (
-        <div className="flex items-center justify-center">
-            <h2 className={styles['text']}>Chris Nash | Loan Officer/Certified Mortgage Advisor</h2>
-            <Image
-                src={`/assets/background-${season}.webp`}
-                priority
-                width={1000}
-                height={300}
-                className={styles['hero']}
-                alt="Screenshots of the dashboard project showing desktop and mobile versions"
-            />
+  return (
+    <div>
+      {video && (
+        <div className={styles['heroContainer']}>
+          <video autoPlay width='250' loop muted className={styles['hero']}>
+            <source src={source} type='video/mp4' />
+          </video>
         </div>
-    )
+      )}
+      {image && (
+        <div className={styles['heroContainer']}>
+          <Image
+            className={styles['backgroundImg']}
+            src={`/images/background/${source}.webp`}
+            alt={source}
+            fill
+            priority
+          />
+          <h1 className={styles['title']}>{imageTitle}</h1>
+        </div>
+      )}
+    </div>
+  );
 }
