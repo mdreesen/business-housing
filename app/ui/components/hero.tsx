@@ -19,7 +19,7 @@ export default function hero({
       {video && (
         <div className={styles['heroContainer']}>
           <video autoPlay loop muted playsInline width='250' className={styles['hero']}>
-            <source src={source} type='video/mp4' />
+            <source src={source} type='video/webm' />
           </video>
         </div>
       )}

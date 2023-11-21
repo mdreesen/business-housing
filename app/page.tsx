@@ -12,7 +12,7 @@ import { lexend, zilla_slab } from '@/app/ui/styles/fonts';
 
 // Importing page components
 import Hero from './ui/components/hero';
-// import Nash from './ui/widgets/nash';
+import Nash from './ui/widgets/nash';
 import seasons from './composables/seasons';
 
 export const metadata: Metadata = {
@@ -20,6 +20,8 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+
+      // const [showWidget, setShowWidget] = useState(false);
 
 
   const years = totalYears();
@@ -29,9 +31,7 @@ export default function Home() {
       <h2 className={`${lexend.className}`}>ABOUT</h2>
       <p className={`${zilla_slab.className}`}>{`Chris Nash has been in the industry for ${years} years and recently built relationships with great professionals in loan origination. `}
       Adding Lorem text for more filler - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur perferendis, iusto dignissimos assumenda temporibus quis nesciunt voluptatibus libero! Repellendus consequatur laborum aperiam velit fugit iste ratione accusantium nisi nemo assumenda!</p>
-      <Suspense fallback={<div />}>
-        <Modal />
-      </Suspense>
+        {/* <Modal /> */}
     </div>
   );
 
