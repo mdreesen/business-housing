@@ -18,7 +18,7 @@ export default function hero({
     <div className='w-full'>
       {video && (
         <div className={styles['heroContainer']}>
-          <video autoPlay width='250' loop muted className={styles['hero']}>
+          <video autoPlay loop muted playsInline width='250' className={styles['hero']}>
             <source src={source} type='video/mp4' />
           </video>
         </div>

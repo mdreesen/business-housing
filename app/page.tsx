@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import { Suspense } from 'react';
 import totalYears from './composables/totalYears';
-import Modal from './ui/components/modal';
+import Modal from '@/app/ui/components/modal';
 
 // Importing styling
 import styles from './ui/styles/homepage.module.css';
@@ -12,7 +12,7 @@ import { lexend, zilla_slab } from '@/app/ui/styles/fonts';
 
 // Importing page components
 import Hero from './ui/components/hero';
-import Nash from './ui/widgets/nash';
+// import Nash from './ui/widgets/nash';
 import seasons from './composables/seasons';
 
 export const metadata: Metadata = {
@@ -21,18 +21,26 @@ export const metadata: Metadata = {
 
 export default function Home() {
 
+
   const years = totalYears();
 
   const about = (
-    <p className={`${zilla_slab.className}`}>{`Chris Nash has been in the industry for ${years} years and recently built relationships with great professionals in loan origination.`}</p>
+    <div>
+      <h2 className={`${lexend.className}`}>ABOUT</h2>
+      <p className={`${zilla_slab.className}`}>{`Chris Nash has been in the industry for ${years} years and recently built relationships with great professionals in loan origination. `}
+      Adding Lorem text for more filler - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur perferendis, iusto dignissimos assumenda temporibus quis nesciunt voluptatibus libero! Repellendus consequatur laborum aperiam velit fugit iste ratione accusantium nisi nemo assumenda!</p>
+      <Suspense fallback={<div />}>
+        <Modal />
+      </Suspense>
+    </div>
   );
 
   const whatIDo = (
     <div>
       <h2 className={`${lexend.className}`}>What I Do</h2>
       <p className={`${zilla_slab.className}`}>I offer a wide variety of lending options and pride ourselves in being able to pair the right product with our customers.
-      Navigating the complicated world of mortgages can be daunting.
-      I will help to explain the benefits and challenges of each program available to you.</p>
+        Navigating the complicated world of mortgages can be daunting.
+        I will help to explain the benefits and challenges of each program available to you.</p>
     </div>
   );
 
@@ -49,24 +57,22 @@ export default function Home() {
         <Hero video source={'/videos/video-chris-one.mp4'} />
       </Suspense>
       <section>
-        <h2 className={`${lexend.className}`}>ABOUT</h2>
         <div className={styles['section-two']}>
-        <div>
-          {about}
-          {whatIDo}
-          {howIHelp}
-        </div>
-        <Image
-        className='hidden md:block'
-          src={`/assets/chris/chris-transparent.webp`}
-          alt="Image of Chris Nash"
-          width={301}
-          height={452}
-          priority
-        />
+            {about}
+          <Image
+            className='hidden md:block'
+            src={`/assets/chris/chris-circle.webp`}
+            alt="Image of Chris Nash"
+            width={301}
+            height={452}
+            priority
+          />
         </div>
       </section>
-      <Modal/>
+      <section className={styles['section-three']}>
+        {whatIDo}
+        {howIHelp}
+      </section>
     </main>
   )
 }
