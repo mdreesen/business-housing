@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Suspense fallback={`/assets/${seasons}.webp`}>
-        <Hero video source={'/videos/video-chris-one.mp4'} />
+        <Hero video source={'/videos/video-chris-one.webm'} />
       </Suspense>
       <section>
         <div className={styles['section-two']}>
