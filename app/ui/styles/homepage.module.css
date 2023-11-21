@@ -1,0 +1,11 @@
+.section-two {
+  display: flex;
+  align-items: center;
+}
+
+.section-two > div {
+  display: flex;
+  align-items: center;
+  row-gap: 2rem;
+  flex-direction: column;
+}
