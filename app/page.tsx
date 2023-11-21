@@ -1,4 +1,3 @@
-// "use client"
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Suspense } from 'react';
@@ -20,9 +19,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-
-      // const [showWidget, setShowWidget] = useState(false);
-
 
   const years = totalYears();
 
@@ -53,7 +49,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <Suspense fallback={`/assets/${seasons}.webp`}>
+      <Suspense fallback={<div/>}>
         <Hero video source={'/videos/video-chris-one.webm'} />
       </Suspense>
       <section>
