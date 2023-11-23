@@ -1,5 +1,5 @@
-"use client";
-import React, { useEffect } from 'react';
+// "use client";
+import React from 'react';
 import Image from 'next/image';
 import styles from '../styles/hero.module.css';
 
@@ -15,12 +15,10 @@ export default function hero({
   imageTitle?: string;
 }) {
 
-  useEffect(() => {
-    const video = document.getElementById('autoplay') as HTMLInputElement | null;
-    if (video != null) {
-      video?.play(); 
-    }
-  }, []);
+  // useEffect(() => {
+  //   const video: HTMLElement | null = document.getElementById("autoplay");
+  //   if (video != null) video?.play();
+  // }, []);
 
   return (
     <div className='w-full'>
@@ -45,4 +43,5 @@ export default function hero({
       )}
     </div>
   );
-}
+};
+
