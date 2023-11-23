@@ -4,9 +4,10 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import styles from '../styles/nav.module.css';
 import Link from 'next/link';
+import { yellowtail } from '@/app/ui/styles/fonts';
 
 const navigation = [
-  { name: 'About', href: '#', current: true, id: "dropdownHoverButton", toggleData: "dropdownHover", triggerData: "hover" },
+  { name: 'About', href: '/about', current: true, id: "dropdownHoverButton", toggleData: "dropdownHover", triggerData: "hover" },
   { name: 'Free Tools', href: '#', current: false },
   { name: 'Contact Us', href: '#', current: false },
 ]
@@ -44,6 +45,7 @@ export default function Example() {
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
+              <Link className={`${yellowtail.className} text-white`} href="/">Chris Nash</Link>
               <div className="flex flex-1 items-center justify-end sm:items-stretch right-0">
                 <div className="hidden sm:ml-6 sm:block justify-right">
                   <div className="flex space-x-4">
