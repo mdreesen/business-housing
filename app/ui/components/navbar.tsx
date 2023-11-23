@@ -3,9 +3,10 @@ import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import styles from '../styles/nav.module.css';
+import Link from 'next/link';
 
 const navigation = [
-  { name: 'About', href: '#', current: true },
+  { name: 'About', href: '#', current: true, id: "dropdownHoverButton", toggleData: "dropdownHover", triggerData: "hover" },
   { name: 'Free Tools', href: '#', current: false },
   { name: 'Contact Us', href: '#', current: false },
 ]
@@ -17,6 +18,26 @@ function classNames(...classes: string[]) {
 // bg-gray-800
 
 export default function Example() {
+
+  const dropdown = (
+    <>{ /* Dropdown menu */ }
+<div id="dropdownHover" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+    <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+      <li>
+        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+      </li>
+      <li>
+        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+      </li>
+      <li>
+        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+      </li>
+    </ul>
+</div></>
+  )
   return (
     <Disclosure as="nav" className={`${styles['background']} fixed z-10 w-full bg-opacity-80`}>
       {({ open }) => (
@@ -27,9 +48,12 @@ export default function Example() {
                 <div className="hidden sm:ml-6 sm:block justify-right">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
+                        id={item?.id}
+                        data-dropdown-toggle={item?.toggleData}
+                        data-dropdown-trigger={item?.triggerData}
                         className={classNames(
                           item.current ? 'text-white underline' : 'text-gray-300 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
@@ -37,7 +61,7 @@ export default function Example() {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>

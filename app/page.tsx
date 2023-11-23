@@ -24,7 +24,7 @@ export default function Home() {
 
   const about = (
     <div>
-      <h2 className={`${lexend.className}`}>ABOUT</h2>
+      <h2 className={`${lexend.className}`}>About</h2>
       <p className={`${zilla_slab.className}`}>{`Chris Nash has been in the industry for ${years} years and recently built relationships with great professionals in loan origination. `}
       Adding Lorem text for more filler - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur perferendis, iusto dignissimos assumenda temporibus quis nesciunt voluptatibus libero! Repellendus consequatur laborum aperiam velit fugit iste ratione accusantium nisi nemo assumenda!</p>
         {/* <Modal /> */}
@@ -42,7 +42,7 @@ export default function Home() {
 
   const howIHelp = (
     <div>
-      <h2 className={`${lexend.className}`}>WHO I HELP</h2>
+      <h2 className={`${lexend.className}`}>Who I Help</h2>
       <p className={`${zilla_slab.className}`}>Clients come from all walks of life and extend not only to Northwest Montana, but all over Big Sky Country. I've helped clients with purchase and refinance loans in Columbia Falls, Kalispell, & Whitefish, along with the surrounding areas of Bigfork, Hungry Horse & West Glacier. We are also licensed to originate loans throughout the entire state of Montana.</p>
     </div>
   )
