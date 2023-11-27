@@ -2,17 +2,20 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from '../styles/hero.module.css';
+import { atRule } from 'postcss';
 
 export default function hero({
   video,
   source,
   image,
   imageTitle,
+  altTitle,
 }: {
   video?: boolean;
   image?: boolean;
   source: string;
   imageTitle?: string;
+  altTitle?: string | undefined;
 }) {
 
   // useEffect(() => {
@@ -33,8 +36,8 @@ export default function hero({
         <div className={styles['heroContainer']}>
           <Image
             className={styles['backgroundImg']}
-            src={`/images/background/${source}.webp`}
-            alt={source}
+            src={source}
+            alt={altTitle ?? ''}
             fill
             priority
           />

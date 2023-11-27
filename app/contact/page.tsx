@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import Hero from '@/app/ui/components/hero';
 import { Suspense } from 'react';
 import GoogleMap from "@/app/ui/components/googleMap";
 import { RevenueChartSkeleton } from "@/app/ui/components/skeletons"
@@ -29,6 +30,7 @@ export default function Contact() {
 
   return (
     <main className="flex flex-col items-center justify-between">
+      <Hero image source={'/assets/background-default.webp'} altTitle='Nature image' />
       <section className={styles['section-container']}>
       <div>
           {address}
