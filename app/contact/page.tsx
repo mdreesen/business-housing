@@ -1,4 +1,3 @@
-"use client"
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Suspense } from 'react';
@@ -7,16 +6,10 @@ import GoogleMap from "@/app/ui/components/googleMap";
 
 // Importing styling
 import styles from '../ui/styles/homepage.module.css';
-import { lexend, zilla_slab } from '@/app/ui/styles/fonts';
-import Link from 'next/link';
 
-
-// Importing page components
-// import Hero from './ui/components/hero';
-
-// export const metadata: Metadata = {
-//   title: 'Contact | Chris Nash',
-// };
+export const metadata: Metadata = {
+  title: 'Contact | Chris Nash',
+};
 
 export default function Contact() {
 
