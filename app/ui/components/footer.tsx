@@ -9,8 +9,8 @@ export default function footer() {
 
   const followUs = (
     <div className={styles['footer-section']}>
-      <h2 className="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-      <ul className="text-gray-500 dark:text-gray-400 font-medium">
+      <h2 className="mb-2 text-sm font-semibold uppercase text-white">Follow us</h2>
+      <ul className="text-gray-400 font-medium">
         <li>
           <Link href="#" className="hover:underline ">Facebook</Link>
         </li>
@@ -23,8 +23,8 @@ export default function footer() {
 
   const resources = (
     <div className={styles['footer-section']}>
-      <h2 className="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-      <ul className="text-gray-500 dark:text-gray-400 font-medium">
+      <h2 className="mb-2 text-sm font-semibold uppercase text-white">Resources</h2>
+      <ul className="text-gray-400 font-medium">
         <li>
           <Link href="https://flowbite.com/" className="hover:underline">Video page maybe?</Link>
         </li>
@@ -37,8 +37,8 @@ export default function footer() {
 
   const loanPrograms = (
     <div className={styles['footer-section']}>
-      <h2 className="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Loan Programs</h2>
-      <ul className="text-gray-500 dark:text-gray-400 font-medium">
+      <h2 className="mb-2 text-sm font-semibold uppercase text-white">Loan Programs</h2>
+      <ul className="text-gray-400 font-medium">
         <li><Link href="https://flowbite.com/" className="hover:underline">Conventional Loans</Link></li>
         <li><Link href="https://tailwindcss.com/" className="hover:underline">FHA Loans</Link></li>
         <li><Link href="https://tailwindcss.com/" className="hover:underline">VA Loans</Link></li>
@@ -50,7 +50,7 @@ export default function footer() {
 
   const getInTouch = (
     <div className={styles['footer-section']}>
-      <h2 className="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+      <h2 className="mb-2 text-sm font-semibold uppercase text-white">Get In Touch</h2>
       <ul className="text-gray-500 dark:text-gray-400 font-medium">
         <li>
           <span className="mb-2">
@@ -67,7 +67,7 @@ export default function footer() {
   );
 
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className="bg-gray-900">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           {/* <div className="mb-2 md:mb-0">
@@ -94,11 +94,11 @@ export default function footer() {
             </div> */}
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {yearToDate?.date?.year} <Link href="https://mdreesen.com/" className="hover:underline">DREESEN™</Link>. All Rights Reserved.</span>
+          <span className="text-sm sm:text-center text-gray-400">© {yearToDate?.date?.year} <Link href="https://mdreesen.com/" className="hover:underline">DREESEN™</Link>. All Rights Reserved.</span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
-            <Link href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <Link href="#" className="hover:text-gray-900 hover:text-white">
               <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
                 <path fillRule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clipRule="evenodd" />
               </svg>
@@ -110,7 +110,7 @@ export default function footer() {
               </svg>
               <span className="sr-only">Discord community</span>
             </Link> */}
-            <Link href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+            <Link href="#" className="hover:text-gray-900 hover:text-white ms-5">
               <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
                 <path fillRule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clipRule="evenodd" />
               </svg>

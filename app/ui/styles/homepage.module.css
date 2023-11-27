@@ -25,8 +25,8 @@
 
   /*  this is where the magic happens for background image:  */
   background-attachment: fixed;
-  background-blend-mode: overlay;
-  background-color: darkgrey;
+  /* background-blend-mode: overlay; */
+  /* background-color: darkgrey; */
   background-image: url('/assets/houses/house-winter.webp');
   background-position: center;
   background-size: cover;
@@ -50,8 +50,8 @@
 
   /*  this is where the magic happens:  */
   background-attachment: fixed;
-  background-blend-mode: overlay;
-  background-color: darkgrey;
+  /* background-blend-mode: overlay; */
+  /* background-color: darkgrey; */
   background-image: url('/assets/houses/house-summer.webp');
   background-position: center;
   background-size: cover;
@@ -62,8 +62,8 @@
 }
 
 .section-three-content {
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
   display: flex;
   flex-direction: column;
   row-gap: 5rem;
