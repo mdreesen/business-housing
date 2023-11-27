@@ -45,12 +45,7 @@ export default function Home() {
     <div>
       <h2 className={`${lexend.className}`}>Who I Help</h2>
       <p className={`${zilla_slab.className}`}>Clients come from all walks of life and extend not only to Northwest Montana, but all over Big Sky Country. I've helped clients with purchase and refinance loans in Columbia Falls, Kalispell, & Whitefish, along with the surrounding areas of Bigfork, Hungry Horse & West Glacier. We are also licensed to originate loans throughout the entire state of Montana.</p>
-    </div>
-  );
-
-  const typesOfLoans = (
-    <div className={styles['container-loan-type']}>
-      {loadTypeData.map((item, index) => <div key={index} className={styles[`loan-type-${index}`]}>{item?.name}</div>)}
+      <div className={styles['container-loan-type']}>{loadTypeData.map((item, index) => <div key={index} className={styles[`loan-type-${index}`]}>{item?.name}</div>)}</div>
     </div>
   );
 
@@ -98,9 +93,10 @@ export default function Home() {
         </div>
       </section>
       <section className={styles[`section-three-${season}`]}>
-        {whatIDo}
-        {howIHelp}
-        {typesOfLoans}
+        <div className={styles["section-three-content"]}>
+          {whatIDo}
+          {howIHelp}
+        </div>
       </section>
       <section className={styles['section-four']}>
         {loanOptions}

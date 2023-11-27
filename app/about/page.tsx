@@ -7,6 +7,7 @@ import Modal from '@/app/ui/components/modal';
 // Importing styling
 import styles from '../ui/styles/homepage.module.css';
 import { lexend, zilla_slab } from '@/app/ui/styles/fonts';
+import Link from 'next/link';
 
 
 // Importing page components
@@ -29,7 +30,7 @@ export default function Home() {
   );
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="flex flex-col items-center justify-between">
       <section>
         <div className={styles['section-two']}>
             {about}
@@ -43,6 +44,7 @@ export default function Home() {
           />
         </div>
       </section>
+      <Link href={"https://www.blink.mortgage/app/signup/p/mountainlakemortgagecorporation/chrisnash"}>Apply Here</Link>
     </main>
   )
 }

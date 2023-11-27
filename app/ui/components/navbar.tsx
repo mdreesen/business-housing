@@ -9,7 +9,7 @@ import { yellowtail } from '@/app/ui/styles/fonts';
 const navigation = [
   { name: 'About', href: '/about', current: true, id: "dropdownHoverButton", toggleData: "dropdownHover", triggerData: "hover" },
   { name: 'Free Tools', href: '#', current: false },
-  { name: 'Contact Us', href: '#', current: false },
+  { name: 'Contact Us', href: '/contact', current: false },
 ]
 
 function classNames(...classes: string[]) {

@@ -26,7 +26,7 @@
   /*  this is where the magic happens for background image:  */
   background-attachment: fixed;
   background-blend-mode: overlay;
-  background-color: gainsboro;
+  background-color: darkgrey;
   background-image: url('/assets/houses/house-winter.webp');
   background-position: center;
   background-size: cover;
@@ -51,7 +51,7 @@
   /*  this is where the magic happens:  */
   background-attachment: fixed;
   background-blend-mode: overlay;
-  background-color: gainsboro;
+  background-color: darkgrey;
   background-image: url('/assets/houses/house-summer.webp');
   background-position: center;
   background-size: cover;
@@ -61,12 +61,22 @@
   text-align: center;
 }
 
+.section-three-content {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+  padding: 1rem;
+}
+
 .container-loan-type {
   display: grid;
   grid-template-columns: max-content max-content max-content;
   text-align: start;
   width: 100%;
   justify-content: space-evenly;
+  padding: 1rem 0;
 }
 
 .section-four {
