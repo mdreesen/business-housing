@@ -53,10 +53,13 @@ export default function footer() {
       <h2 className="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
       <ul className="text-gray-500 dark:text-gray-400 font-medium">
         <li>
-          162 Timberwolf Parkway, Suite C
-          Kalispell, MT 59901<br/>
-          Phone: 406-751-2350<br/>
-          Cell: 406-260-7272<br/>
+          <span className="mb-2">
+            162 Timberwolf Parkway, Suite C<br />
+            Kalispell, MT 59901<br />
+          </span>
+
+          Phone: 406-751-2350<br />
+          Cell: 406-260-7272<br />
           Email: ChrisN@mtnlk.com
         </li>
       </ul>
@@ -73,7 +76,7 @@ export default function footer() {
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
             </Link>
           </div> */}
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4">
             {getInTouch}
             {loanPrograms}
             {resources}
