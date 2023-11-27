@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Suspense } from 'react';
-import totalYears from './composables/totalYears';
-import Modal from '@/app/ui/components/modal';
+import date from './composables/date';
+// import Modal from '@/app/ui/components/modal';
 import loadTypeData from '@/app/utils/loanType.json'
 
 // Importing styling
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
 
 export default function Home() {
 
-  const years = totalYears();
+  const years = date();
   const season = seasons();
 
   const about = (
     <div>
       <h2 className={`${lexend.className}`}>About</h2>
-      <p className={`${zilla_slab.className}`}>{`Chris Nash has been in the industry for ${years} years and recently built relationships with great professionals in loan origination. `}
+      <p className={`${zilla_slab.className}`}>{`Chris Nash has been in the industry for ${years?.yearsInField} years and recently built relationships with great professionals in loan origination. `}
         Adding Lorem text for more filler - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur perferendis, iusto dignissimos assumenda temporibus quis nesciunt voluptatibus libero! Repellendus consequatur laborum aperiam velit fugit iste ratione accusantium nisi nemo assumenda!</p>
     </div>
   );

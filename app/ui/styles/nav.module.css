@@ -3,6 +3,11 @@
   backdrop-filter: blur(6px);
   }
 
+  .background-change {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+
   .mobile-menu {
     display: flex;
     flex-direction: column;

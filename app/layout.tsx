@@ -6,7 +6,6 @@ import './globals.css';
 import Navbar from '@/app/ui/components/navbar';
 import Footer from "@/app/ui/components/footer";
 
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -19,16 +18,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
   return (
+
     <html lang="en">
       <head>
         <script src="https://mbshighway.com/scripts/plugins/widgetRender.js" />
       </head>
-
       <body suppressHydrationWarning={true} className={inter.className}>
         <Navbar />
         {children}
         <Footer />
       </body>
     </html>
+    
   )
 }

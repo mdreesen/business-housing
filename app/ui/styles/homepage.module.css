@@ -18,12 +18,12 @@
   background-color: whitesmoke;
 
   display: flex;
-  min-height: 100vh;
+  min-height: 100svh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  /*  this is where the magic happens:  */
+  /*  this is where the magic happens for background image:  */
   background-attachment: fixed;
   background-blend-mode: overlay;
   background-color: gainsboro;
@@ -43,7 +43,7 @@
   background-color: whitesmoke;
 
   display: flex;
-  min-height: 100vh;
+  min-height: 100svh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
