@@ -1,6 +1,7 @@
 .section-two {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .section-two > div {
@@ -10,12 +11,68 @@
   flex-direction: column;
 }
 
-.section-three {
+.section-three-winter {
   display: flex;
   align-items: center;
   column-gap: 1.5rem;
-  /* padding: 5rem 1rem; */
   background-color: whitesmoke;
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /*  this is where the magic happens:  */
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-color: gainsboro;
+  background-image: url('/assets/houses/house-winter.webp');
+  background-position: center;
+  background-size: cover;
+  color: var(--color);
+  row-gap: 4rem;
+
+  text-align: center;
+}
+
+.section-three-summer {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+  background-color: whitesmoke;
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /*  this is where the magic happens:  */
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-color: gainsboro;
+  background-image: url('/assets/houses/house-summer.webp');
+  background-position: center;
+  background-size: cover;
+  color: var(--color);
+  row-gap: 4rem;
+
+  text-align: center;
+}
+
+.container-loan-type {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  text-align: start;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.section-four {
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -25,7 +82,14 @@
     align-items: center;
     row-gap: 1.5rem;
     column-gap: 1.5rem;
-    /* padding: 5rem 1rem; */
     background-color: whitesmoke;
+  }
+
+  .container-loan-type {
+    display: grid;
+    grid-template-columns: max-content;
+    text-align: start;
+    width: 100%;
+    justify-content: space-evenly;
   }
 }

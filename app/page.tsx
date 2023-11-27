@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Suspense } from 'react';
 import totalYears from './composables/totalYears';
 import Modal from '@/app/ui/components/modal';
+import loadTypeData from '@/app/utils/loanType.json'
 
 // Importing styling
 import styles from './ui/styles/homepage.module.css';
@@ -21,13 +22,13 @@ export const metadata: Metadata = {
 export default function Home() {
 
   const years = totalYears();
+  const season = seasons();
 
   const about = (
     <div>
       <h2 className={`${lexend.className}`}>About</h2>
       <p className={`${zilla_slab.className}`}>{`Chris Nash has been in the industry for ${years} years and recently built relationships with great professionals in loan origination. `}
-      Adding Lorem text for more filler - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur perferendis, iusto dignissimos assumenda temporibus quis nesciunt voluptatibus libero! Repellendus consequatur laborum aperiam velit fugit iste ratione accusantium nisi nemo assumenda!</p>
-        {/* <Modal /> */}
+        Adding Lorem text for more filler - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur perferendis, iusto dignissimos assumenda temporibus quis nesciunt voluptatibus libero! Repellendus consequatur laborum aperiam velit fugit iste ratione accusantium nisi nemo assumenda!</p>
     </div>
   );
 
@@ -45,16 +46,47 @@ export default function Home() {
       <h2 className={`${lexend.className}`}>Who I Help</h2>
       <p className={`${zilla_slab.className}`}>Clients come from all walks of life and extend not only to Northwest Montana, but all over Big Sky Country. I've helped clients with purchase and refinance loans in Columbia Falls, Kalispell, & Whitefish, along with the surrounding areas of Bigfork, Hungry Horse & West Glacier. We are also licensed to originate loans throughout the entire state of Montana.</p>
     </div>
-  )
+  );
+
+  const typesOfLoans = (
+    <div className={styles['container-loan-type']}>
+      {loadTypeData.map((item, index) => <div key={index} className={styles[`loan-type-${index}`]}>{item?.name}</div>)}
+    </div>
+  );
+
+  const loanOptions = (
+    <>
+      <Image
+        className='hidden md:block'
+        src={`/assets/houses/house-river.webp`}
+        alt="Image of Chris Nash"
+        width={301}
+        height={452}
+        priority
+      />
+      <div>
+        <h2 className={`${lexend.className}`}>Home Refinancing</h2>
+        <h3 className={`${lexend.className}`}>RATE RESTRUCTURE, DEBT CONSOLIDATION & CASH-OUT REFINANCING</h3>
+        <p className={`${zilla_slab.className}`}>
+          We realize that everyday life can add up fast. Our refi options allow homeowners to let their equity work for them, empowering clients to consolidate debt or use equity in a cash-out scenario. You can use home refinancing options to:
+
+          Lower your home loan interest rates
+          Pay off existing loans or personal debt
+          Help with medical expenses or high interest credit cards
+          Equity for home improvements
+        </p>
+      </div>
+    </>
+  );
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <Suspense fallback={<div/>}>
+      <Suspense fallback={<div />}>
         <Hero video source={'/videos/video-chris-one.webm'} />
       </Suspense>
       <section>
         <div className={styles['section-two']}>
-            {about}
+          {about}
           <Image
             className='hidden md:block'
             src={`/assets/chris/chris-circle.webp`}
@@ -65,10 +97,14 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className={styles['section-three']}>
+      <section className={styles[`section-three-${season}`]}>
         {whatIDo}
         {howIHelp}
+        {typesOfLoans}
+      </section>
+      <section className={styles['section-four']}>
+        {loanOptions}
       </section>
     </main>
-  )
-}
+  );
+};
